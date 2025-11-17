@@ -1,15 +1,17 @@
 
 const formatValue=(value: string | number | boolean) : string | number | boolean =>{
+    
     if(typeof value === 'string'){
         return value.toUpperCase();
     }
 
-    if (typeof value === 'number'){
+    else if (typeof value === 'number'){
         return value*10;
     }
-    if (typeof value === 'boolean'){
+    else if (typeof value === 'boolean'){
         return !value;
     }
+    return value;
 }
 
 console.log(formatValue('hello'));
